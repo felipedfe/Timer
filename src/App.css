@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+  text-decoration: underline rgb(0, 0, 0) 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  background-color: rgb(151, 255, 148);
+  background-image: url(http://localhost:3000/images/riscos.png);
+  background-size: 80px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inputs-and-button {
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 200px;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding-top: 80px;
+  padding-bottom: 75px;
+  border-radius: 7px;
+  box-shadow: 12px 12px 0px  rgb(0, 0, 0);
+}
+
+.inputs-container {
+  display: flex;
+  margin-bottom: 20px;
+  /* background-color: aqua; */
+}
+
+#input-minutes, #input-seconds {
+  background-color: white;
+  font-size: large;
+  padding: 5px;
+}
+
+.container-minutes {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.container-seconds {
+  display: flex;
+  align-items: center;
+}
+
+input {
+  margin-left: 10px;
+  border-color: rgb(0, 172, 252);
+  border-radius: 5px;
+  border: solid rgb(0, 0, 0) 2px;
+  background-color: rgb(255, 252, 91);
+}
+
+
+.start-button, .cancel-button {
+  padding: 15px;
+  border-radius: 5px;
   color: white;
+  font-weight: 700;
+  border: none; 
+  font-size: large;
+  margin-top: 20px;
+  width: 300px;
+  height: 60px;
 }
 
-.App-link {
-  color: #61dafb;
+.start-button:enabled {
+  background-color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.start-button:disabled {
+  background-color: rgb(197, 197, 197);
+}
+
+.cancel-button:hover,.start-button:enabled:hover {
+  outline: double 6px rgb(0, 0, 0);
+}
+
+/* TIMER */
+.cancel-button {
+  background-color: rgb(0, 0, 0);
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  margin-top: 60px;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding-top: 10px;
+  padding-bottom: 60px;
+  border-radius: 7px;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+.despertador-image {
+  width: 80%;
 }

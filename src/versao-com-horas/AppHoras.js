@@ -1,14 +1,15 @@
 import React from 'react';
 import './App.css';
-import Inputs from './components/Inputs';
-import Timer from './components/Timer';
+import InputsHoras from './InputsHoras';
+import TimerHoras from './TimerHoras';
 
 
-class App extends React.Component {
-  constructor() {
-    super();
+class AppHoras extends React.Component {
+  constructor(props) {
+    super(props);
     this.state = {
       setTimer: {
+        inputHora: undefined,
         inputMinuto: undefined,
         inputSegundo: undefined,
       },
@@ -16,9 +17,10 @@ class App extends React.Component {
     }
   }
 
-  handleInputs = (inputSegundo, inputMinuto) => {
+  handleInputs = (inputSegundo, inputMinuto, inputHora) => {
     this.setState({
       setTimer: {
+        inputHora,
         inputMinuto,
         inputSegundo,
       },
@@ -39,12 +41,12 @@ class App extends React.Component {
     return <>
       {isTimerOn
       ?
-      <Timer setTimer={ setTimer } turnTimerOff={ this.turnTimerOff }/>
+      <TimerHoras setTimer={ setTimer } turnTimerOff={ this.turnTimerOff }/>
       :
-      <Inputs handleInputs={ this.handleInputs } />
+      <InputsHoras handleInputs={ this.handleInputs } />
       }
     </>
   }
 }
 
-export default App;
+export default AppHoras;
