@@ -66,7 +66,7 @@ class Timer extends React.Component {
             :
             <img
               className="despertador-image"
-              src="../images/despertador_4.gif"
+              src="../images/despertador_5.gif"
               alt="despertador">
             </img>}
 
